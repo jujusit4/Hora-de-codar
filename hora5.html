@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletronico</title>
+</head>
+
+<body>
+    <script>
+// Com base no arquivo CaixaEletronico.html, aperfeiçoei a lógica dela conforme apresentado na atividade.
+
+        var saldo = 100.5
+        var nome = prompt("Qual seu nome?")
+        alert("Olá " + nome + ", é um prazer ter você por aqui!")
+
+        var extrato_historico = [
+            "Depósito inicial: R$ 100.50",
+            "Compra Supermercado (Débito): - R$ 45.00",
+            "Pix Recebido (Crédito): + R$ 200.00",
+            "Farmácia (Débito): - R$ 15.80"
+        ]
+
+        function inicio() {
+
+            var escolha = parseInt(prompt(nome + ', selecione uma opção: \n1.) Saldo \n2.) Extrato \n3.) Saque \n4.) Depósito \n5.) Transferência \n6.) Sair'))
+
+            switch(escolha){
+                case 1:
+                    validar_senha()
+                    ver_saldo()
+                    break
+                case 2:
+                    validar_senha()
+                    ver_extrato()
+                    break
+                case 3:
+                    validar_senha()
+                    fazer_saque()
+                    break
+                case 4: 
+                    validar_senha()
+                    fazer_deposito()
+                    break
+                case 5:
+                    validar_senha()
+                    fazer_transferencia()
+                    break
+                case 6: 
+                    sair()
+                    break
+                default:
+                    erro()
+            }
+        }
+
+        function validar_senha() {
+            do {
+                var senha = prompt("Insira sua senha:")
+                if(senha !== "3589"){
+                    alert("Senha inválida.")
+                } 
+            } while (senha !== "3589")
+        }
+
+        function ver_saldo() {
+			alert('Seu saldo atual é: ' + saldo)
+			inicio();
+		}
+
+        function ver_extrato() {
+            var extrato_formatado = "--- EXTRATO DE TRANSAÇÕES ---\n\n" + extrato_historico.join('\n')
+            alert(extrato_formatado)
+            inicio()
+        }
+
+        function fazer_saque() {
+            var saque = parseFloat(prompt('Qual o valor para saque?'))
+			if (isNaN(saque) || saque === '') {
+				alert('Por favor, informe um número:')
+				fazer_saque();
+			} else if (saque > saldo || saque <= 0) {
+                alert("Operação não autorizada.")
+                inicio()
+            }
+            else {
+				saldo -= saque
+				ver_saldo()
+			}
+        }
+
+        function fazer_deposito() {
+			var deposito = parseFloat(prompt('Qual o valor para depósito?'))
+			if (isNaN(deposito) || deposito === '') {
+				alert('Por favor, informe um número:')
+				fazer_deposito()
+			} else if (deposito <= 0) {
+                alert("Operação não autorizada.")
+                inicio()
+            }
+            else {
+				saldo += deposito;
+				ver_saldo()
+			}
+		}
+
+        function fazer_transferencia() {
+            do {
+            var conta = parseInt(prompt("Digite o número da conta que você deseja efetuar a transferência:"))
+            if (isNaN(conta) || conta === '') {
+                alert("Apenas números são aceitos.")
+            } 
+            } while (isNaN(conta) || conta === '' )
+        
+                do {
+                var valor_transferencia = parseFloat(prompt("Qual o valor da transferência?"))
+                if (isNaN(valor_transferencia) || valor_transferencia === '') {
+                    alert('Por favor, informe um valor coerente:')
+                } else if (valor_transferencia >= saldo){
+                    alert("Operação não autorizada.")
+                    inicio()
+                }
+            } while (isNaN(valor_transferencia) || valor_transferencia === '')
+               
+				    saldo -= valor_transferencia
+                    ver_saldo()  
+        }      
+            
+        function sair() {
+            var confirma = confirm('Você deseja sair?');
+			if (confirma) {
+                alert(nome + ", foi um prazer ter você por aqui!")
+				window.close()
+			} else {
+				inicio()
+			}
+        }
+
+        function erro() {
+            alert('Por favor, informe um número entre 1 e 6')
+			inicio()
+        }
+
+        inicio()
+        
+    </script>
+</body>
+
+</html>
