@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1
+        // Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles. 
+
+        // var contEst = []
+        // var estudantes
+        // do {
+        //     estudantes = prompt("Cadastre um estudante inserindo seu nome (digite pare quando cadastras todos que deseja):")
+        //     if(estudantes !== "pare"){
+        //         if(estudantes.trim() === "") {
+        //             alert("ERRO! Informe um nome condizente:")
+        //         } else{
+        //                 contEst.push(estudantes)
+        //         }
+        //     }
+        // } while(estudantes !== "pare")
+
+        // document.write("A quantidade de alunos cadastrados é de " + contEst.length + ", e, abaixo está a lista dos nomes:<br><br> " + contEst.sort().join('<br>'))
+
+
+        // 2
+        // Crie uma array de planetas que inclua "Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"  e, em seguida, peça ao usuário para digitar o nome de um planeta. 
+        // Verifique se o planeta que o usuário informou está na array e informe ao usuário.
+
+        // var planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"]
+        // var stop = "n"
+
+        // do{
+        //     var planetaUsuario = prompt("Digite o nome de um planeta:")
+        //     if (planetas.includes(planetaUsuario)){
+        //         alert("Esse planeta é verdadeiro!")
+        //     } else {
+        //         alert("Esse planeta não parece ser verdadeiro.")
+        //     }
+        //     do {
+        //         stop = prompt("Deseja inserir outro nome? (s/n)")
+        //         if(stop !== "s" && stop !== "n"){
+        //         alert("ERRO: Insira apenas 's' para sim, e 'n' para não. Tente novamente.")
+        //         }
+        //     } while(stop !== "s" && stop !== "n")               
+        // } while (stop == "s")
+
+
+        // 3
+        // Vamos criar uma lista de compras. 
+        // Crie uma array de frutas, exiba-a ao usuário e, em seguida, peça ao usuário para digitar o nome de uma das frutas.
+        // Caso a fruta esteja no array, remova-a e exiba a mensagem "Fruta foi retirada da lista". 
+        // Peça novamente para o usuário digitar o nome de uma fruta para ser removida. 
+        // Sempre que o usuário procurar por uma fruta que não está no array exiba a mensagem "Fruta indisponível no nosso mercado". 
+        // Quando o array não possuir mais itens dentro de si, escreva "Lista de compras finalizada".
+
+        // var lista = ["maça", "banana", "manga", "laranja", "mexerica", "morango"]
+
+        // do {
+        // var escolha = prompt(("Escolha uma das frutas disponíveis:\n " + lista.join(", ")))
+        // var indice = lista.findIndex(function(lista) {
+        //     return lista === escolha;
+        //     })
+        // if (indice !== -1) {
+        //     lista.splice(indice, 1); 
+        //     alert("Fruta retirada da lista.");
+        // } else {
+        //     alert("Fruta indisponível no nosso mercado");
+        //     }
+        // } while (lista.length !== 0)
+
+        // alert("Lista de compras finalizada!")
+
+
+        
+
+    </script>
+</body>
+
+</html>
