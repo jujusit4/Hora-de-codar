@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Escreva um programa em que o usuário informe dois números. Então escreva em tela o maior deles.
+
+        // var n1 = parseInt(prompt("informe um número:"))
+        // var n2 = parseInt(prompt("informe outro número:"))
+        // if (n1 > n2) {
+        //     alert("O numero " + n1 + " é o maior.")
+        // }
+        // else if (n1 < n2) {
+        //     alert("O numero " + n2 + " é o maior.")
+        // }
+        // else{
+        //     alert("Informe um número condizente.")
+        // }
+
+        // 2. Faça um programa que leia um valor informado pelo usuário e diga se o valor informado é positivo, negativo ou zero.
+
+        // var valor = parseInt(prompt("informe um valor:"))
+        // if (valor === 0 ) {
+        //     alert("O numero " + valor + " é zero.")
+        // }
+        // else if (valor > 0) {
+        //     alert("O numero " + valor + " é positivo.")
+        // }
+        // else if (valor < 0) {
+        //     alert("O numero " + valor + " é negativo.")
+        // }
+        // else{
+        //     alert("Informe um valor condizente.")
+        // }
+
+
+        // 3. Faça um programa para ler 3 valores (considere que não serão informados valores iguais) e escrever o maior deles.
+
+        // var n1 = parseInt(prompt("informe um número:"))
+        // var n2 = parseInt(prompt("informe outro número:"))
+        // var n3 = parseInt(prompt("informe mais um número:"))
+
+        // if (n1 > n2 && n1 > n3) {
+        //     alert("O numero " + n1 + " é o maior.")
+        // }
+        // else if (n2 > n1 && n2 > n3) {
+        //     alert("O numero " + n2 + " é o maior.")
+        // }
+        // else if (n3 > n1 && n3 > n2) {
+        //     alert("O numero " + n3 + " é o maior.")
+        // }
+        // else{
+        //     alert("Informe três números condizentes.")
+        // }
+
+        // 4. Faça um programa que leia 3 valores informados pelo usuário (considere que não serão informados valores iguais) e escrever a soma dos 2 maiores.
+
+        // var n1 = parseInt(prompt("informe um número:"))
+        // var n2 = parseInt(prompt("informe outro número:"))
+        // var n3 = parseInt(prompt("informe mais um número:"))
+
+        // if (n1 < n2 && n1 < n3) {
+        //     var soma = n2 + n3      
+        // }
+        // else if (n2 < n1 && n2 < n3) {
+        //     var soma = n1 + n3
+        // }
+        // else if (n3 < n1 && n3 < n2) {
+        //     var soma = n2 + n1
+        // }
+        // else {
+        //     alert("Informe três números condizentes.")
+        // }
+        // alert("A soma dos 2 maiores é " + soma)
+
+        // 5.  Faça um programa que leia 6 valores informados pelo usuário, calcule, exiba os números informados e escreva a média aritmética desses valores lidos.
+
+        // var n1 = parseInt(prompt("informe um número:"))
+        // var n2 = parseInt(prompt("informe outro número:"))
+        // var n3 = parseInt(prompt("informe mais um número:"))
+        // var n4 = parseInt(prompt("informe só mais um número eu juro:"))
+        // var n5 = parseInt(prompt("brincadeira, preciso de mais um:"))
+        // var n6 = parseInt(prompt("agora é sério, informe o último:"))
+        // var numbers = [n1, n2, n3, n4, n5, n6];
+        // var média = (n1 + n2 + n3 + n4 + n5 + n6) / 6
+        // alert("A média aritmética dos números " + numbers.join(", ") + " é " + média.toFixed(2))
+
+
+            // Forma que aprendi e é mais avançada
+        // var numbers = []
+        // var soma = 0
+
+        // for (i = 0; i < 6; i++){
+        //     var n = parseInt(prompt("informe um número:"))
+        //        if(isNaN(n)) {
+        //     alert("Informe um número condizente.");
+        //     i--;
+        //     continue;
+        //         }
+        //     numbers.push(n)
+        //     soma += n
+        // }
+        // var media = soma / 6
+        // alert("A média aritmética dos números " + numbers.join(", ") + " é " + media.toFixed(2))
+
+
+        // 6. Faça um programa que receba quatro valores informados pelo usuário, mas informe somente o primeiro, o último e o maior de todos eles (considere que todos os números informados serão diferentes)
+
+        // var numbers = []
+        // var soma = 0
+
+        // for (i = 0; i < 4; i++){
+        //     var n = parseInt(prompt("informe um número:"))
+        //        if(isNaN(n)) {
+        //     alert("Informe um número condizente.");
+        //     i--;
+        //     continue;
+        //         }
+        //     numbers.push(n)
+        // }
+        // primeiro = numbers[0]
+        // ultimo = numbers[3]
+        // maior = Math.max(...numbers) // reticencias funciona para separar cada numero da array
+
+        // alert("primeiro numero: " + primeiro + ", o ultimo numero: " + ultimo + ", e o maior deles é: " + maior)
+
+
+
+        // 7. Faça um programa que leia 6 números que o usuário vai informar. Todos os números lidos com valor inferior a 72 devem ser somados. Escreva o valor final da soma efetuada e também todos valores que o usuário informou.  
+
+        // var numbers = []
+        // var soma = 0
+
+        // for (i = 0; i < 6; i++){
+        //     var n = parseInt(prompt("informe um número:"))
+        //        if(isNaN(n)) {
+        //     alert("Informe um número condizente.");
+        //     i--;
+        //     continue;
+        //         }
+        //     numbers.push(n)
+        //        if(n < 72){
+        //     soma += n
+        //        }
+        // }
+
+        // alert("Dos números informados: " + numbers.join(", ") + ", apenas os inferiores a 72 seram somados")
+        // alert("E o resultado dessa soma é: " + soma)
+
+
+
+        // 8. Escreva um programa que calcule a média de quatro números informados pelo usuário, mas somente se esses números forem maiores que 0 e menores que 10. No final, se a média for maior que cinco o usuário receberá uma mensagem "Você passou no teste". Em qualquer outra situação, ele receberá uma mensagem de "tente novamente"
+
+        // var numbers = []
+        // var soma = 0
+        // for (i = 0; i < 4; i++){
+        //     var n = parseInt(prompt("informe um número:"))
+        //        if(isNaN(n)) {
+        //     alert("Informe um número condizente.")
+        //     i--
+        //     continue
+        //         }
+        //     numbers.push(n)
+        //        if(n > 0 && n < 10){
+        //     soma += n
+        //        }
+        //        else{
+        //         alert("Informe um numero maior q 0 e menor que 9")
+        //         i--
+        //         continue
+        //        }
+        // }
+        
+        // var media = soma / 4
+
+        // if (media > 5){
+        //     alert("Você passou no teste.")
+        //     }
+        // else{
+        //     alert("Tente novamente")
+        //     }
+
+        // 9. Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que ela nasceu).
+
+            // var ano_nascimento = parseInt(prompt("Que ano você nasceu?"))
+            // if(ano_nascimento > 2007){
+            //     alert("Você ainda não tem idade suficiente para poder votar este ano.")
+            // }
+            // else if (ano_nascimento <= 2007){
+            //     alert("Você já tem idade suficiente para poder votar este ano.")
+            // }
+            // else{
+            //     alert("Digite um ano condizente no formato numérico, ex: 2025")
+            // }
+
+        // 10. Tendo como entrada a altura e o gênero designado ao nascer (codificado da seguinte forma: 1: feminino - 2: masculino - ) de uma pessoa, construa um programa que calcule e imprima seu peso ideal, utilizando as seguintes fórmulas.
+
+            // var altura = parseFloat(prompt("Qual sua altura? (Informe baseado nesse exemplo: 1.75)"))
+            // var genero = prompt("Qual gênero você se identifica entre masculino e feminino?")
+            // var peso_m = (72.7 * altura) - 58
+            // var peso_f = (62.1 * altura) - 44.7
+            // if(genero == "masculino"){
+            //     alert("Seu peso ideal segundo sua altura e gênero é: " + peso_m.toFixed(1) + " kilos.")
+            // }
+            // else if (genero == "feminino") {
+            //     alert("Seu peso ideal segundo sua altura e gênero é: " + peso_f.toFixed(1) + " kilos.")
+            // }
+            // else {
+            //     alert("Informe os campos conforme as opções apresentadas.")
+            // }
+
+        // 11. Uma micro calculadora - Escreva um programa para ler 2 valores inteiros informados pelo usuário e uma das seguintes operações a serem executadas (codificada da seguinte forma: 1. Adição, 2. Subtração, 3. Divisão, 4. Multiplicação).O programa deve calcular e escrever o resultado dessa operação sobre os dois valores lidos. Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4 para as operações
+
+            // var n1 = parseInt(prompt("Informe um valor entre 1 e 4:"))
+            // var n2 = parseInt(prompt("Informe outro valor entre 1 e 4:"))
+            // var operacao = prompt("Digite qual das quatro operações matemáticas básicas você deseja aplicar a esses números para ver o resultado.")
+            // if(operacao == "Adição") {
+            //     var soma = n1 + n2
+            //     alert("A adição entre esses números é " + soma)
+            // }
+            // else if(operacao == "Subtração") {
+            //     var subtracao = n1 - n2
+            //     alert("A subtração entre esses números é " + subtracao)
+            // }
+            // else if(operacao == "Divisão") {
+            //     var divisao = n1 / n2
+            //     alert("A divisão entre esses números é " + divisao.toFixed(2))
+            // }
+            // else if(operacao == "Multiplicação") {
+            //     var multiplicacao = n1 * n2
+            //     alert("A multiplicação entre esses números é " + multiplicacao)
+            // }
+            // else {
+            //     alert("Informe os campos conforme as opções apresentadas.")
+            // }
+
+    </script>
+
+</body>
+
+</html>
